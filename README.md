@@ -2,7 +2,7 @@
 like a love song on the radio
 
 ## Usage:
-As it is set as default [here](https://github.com/berkantkz/symphony/blob/master/index.html#L122), you will see "Symphony, like a love song on the radio" when you visit [https://berkantkz.github.io/symphony/](https://berkantkz.github.io/symphony/).
+As it is set as default [here](https://github.com/berkantkz/symphony/blob/master/index.html#L122), you will see "_Symphony, like a love song on the radio_" when you visit [https://berkantkz.github.io/symphony/](https://berkantkz.github.io/symphony/).
 
 To change this text contains of 3 lines, add ```#``` (hash) and write your own words/sentence by splitting it into 3 pieces using  ```/``` (slash). See the example below:
 > [https://berkantkz.github.io/symphony/```#i been movin'/calm dont start/no trouble with me```](https://berkantkz.github.io/symphony/#i%20been%20movin'/calm%20dont%20start/no%20trouble%20with%20me) will print:
