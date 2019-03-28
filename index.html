@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>berkantkz</title>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="plugin/bigtext/jquery-bigtext.js"></script>
+
+<style>
+ html {
+	background: url("https://is3-ssl.mzstatic.com/image/thumb/Video51/v4/50/fd/a3/50fda3ac-549f-f99a-fd70-308b36bd15d8/GB1301700029.sca1.jpg/735x414mv.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ body {
+	background: #000000bd;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+ }
+	
+ body, html {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	font-family: 'Sarabun', sans-serif;
+}
+
+.center {
+	height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.flex > * {
+	flex: 1 0 auto;
+	margin: 0;
+}
+
+.flex p {
+	font-size: 6em;
+	font-weight: 700;
+    letter-spacing: 25px;
+    word-spacing: -20px;
+    line-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.weirdoContainer {
+    height: 150%;
+    width: 200%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: -25em;
+}
+
+.weirdo {
+    transform: rotate(-20deg);
+    font-size: 2em;
+	font-family: Parisienne;
+    letter-spacing: 0.3em;
+    word-spacing: -0.4em;
+    word-break: break-all;
+    overflow: hidden;
+    color: #ffffff47;
+    user-select: none;
+}
+
+img {
+    position: fixed;
+    bottom: 25px;
+    right: 35px;
+    border: double #fff7;
+    box-shadow: 0 0 25px #fff3;
+}
+
+
+@media screen and (max-width: 1317px) and (max-height: 647px) {
+ .flex p {
+	font-size: 5em !important;
+	/* transform: rotate(-20deg) translateY(100%) !important; */
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .flex p {
+	font-size: 2em !important;
+  }
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Sarabun:400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+</head>
+
+<body>
+<div class="center">
+	<div class="flex"></div>
+	<div class="weirdoContainer">
+		<div class="weirdo">
+			<p></p>
+		</div>
+	</div>
+</div>
+<img src="https://berkantkz.github.io/kz_t.png" height="48px" width="48px"></img>
+
+<script>
+	var max = $('body').height();
+	var bool = true;
+	
+	var sentence = (window.location.hash != "" ? window.location.hash.replace('#','') : "Symphony,/like a love song/on the radio.");
+	sentence = decodeURI(sentence);
+	
+	var part1 = sentence.split('/')[0];
+	var part2 = sentence.split('/')[1];
+	var part3 = sentence.split('/')[2];
+	
+	var sentenceLength = sentence.length;
+	var counter = 0;
+	
+	for (counter; counter<sentenceLength; counter++) {
+		sentence = sentence.replace('/',' ');
+	}
+	
+	console.log(part1 + "\n" + part2 + "\n" + part3);
+	$('.flex').append('<p>' + part1 + '</p>');
+	(part2 != null ? $('.flex').append('<p>' + part2 + '</p>') : null);
+	(part3 != null ? $('.flex').append('<p>' + part3 + '</p>') : null);
+
+	do {
+		$('.weirdo p').append(sentence);
+		if ($('.weirdo').height()>=max*2) {
+			bool = false;
+		}
+	} while (bool);
+	
+</script>
+</body>
