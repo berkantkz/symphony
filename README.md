@@ -31,3 +31,6 @@ If we combine all of them together:
 
   - Q: How about the background?
   - A: ~~Can't be changed. Perhaps I will add an option for it too later. if I find some time for sure.~~ **I added an option for it too!**
+ 
+--- 
+> *I made this thing for landscape & desktop devices. How about mobile view? - Eww, I hate it.*
