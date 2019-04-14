@@ -6,7 +6,6 @@
 
 <style>
  html {
-    background: url("https://is3-ssl.mzstatic.com/image/thumb/Video51/v4/50/fd/a3/50fda3ac-549f-f99a-fd70-308b36bd15d8/GB1301700029.sca1.jpg/735x414mv.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -116,10 +115,51 @@ img {
 <img src="https://berkantkz.github.io/kz_t.png" height="48px" width="48px"></img>
 
 <script>
+	var urlString = window.location.href;
+	var url = new URL(urlString);
+	var bg = url.searchParams.get("bg");
+	var defaultBg = "https://is3-ssl.mzstatic.com/image/thumb/Video51/v4/50/fd/a3/50fda3ac-549f-f99a-fd70-308b36bd15d8/GB1301700029.sca1.jpg/735x414mv.jpg"
+	
+	if (bg) {
+		$('html').css('background-image','url('+ bg + ')')
+	} else {
+		$('html').css('background-image','url('+ defaultBg + ')')
+	}
+	
 	var max = $('body').height();
 	var bool = true;
 	
-	var sentence = (window.location.hash != "" ? window.location.hash.replace('#','') : "Symphony,/like a love song/on the radio.");
+	
+	var first = url.searchParams.get("string1");
+	var second = url.searchParams.get("string2");
+	var third = url.searchParams.get("string3");
+	
+	console.log(first+second+third);
+	
+	var stringCheck;
+	
+	if (first && second && third) {
+		stringCheck = true;
+	} else if (first && !second && !third) {
+		stringCheck = true;
+	} else if (first && second && !third) {
+		stringCheck = true;
+	} else if (first && !second && third) {
+		stringCheck = false;
+	}
+	
+	if (first == null) {
+		first = "";
+	}
+	
+	if (second == null) {
+		second = "";
+	}
+	
+	if (third == null) {
+		third = "";
+	}
+	var sentence = (stringCheck ? first + "/" + second + "/" + third : "Symphony,/like a love song/on the radio.");
 	sentence = decodeURI(sentence);
 	
 	var part1 = sentence.split('/')[0];
@@ -135,8 +175,8 @@ img {
 	
 	console.log(part1 + "\n" + part2 + "\n" + part3);
 	$('.flex').append('<p>' + part1 + '</p>');
-	(part2 != null ? $('.flex').append('<p>' + part2 + '</p>') : null);
-	(part3 != null ? $('.flex').append('<p>' + part3 + '</p>') : null);
+	(part2 != "null" ? $('.flex').append('<p>' + part2 + '</p>') : null);
+	(part3 != "null" ? $('.flex').append('<p>' + part3 + '</p>') : null);
 
 	do {
 		$('.weirdo p').append(sentence);
