@@ -10,15 +10,15 @@ To change this text containing of 3 lines, add ```?``` (quetion mark) right afte
 See the example below:
 
 > [https://berkantkz.github.io/symphony/```?string1=Move&string2=along with&string3=the truth.```](https://berkantkz.github.io/symphony/index.html?string1=Move&string2=along%20with&string3=the%20truth.) will print:
-![Move along with the truth.](https://i.dbreecdn.download/Sl1XwQNw6PJdhQ/original_Ek%20A%C3%A7%C4%B1klama%202019-04-15%20004945.png)
+**media deleted from the server**
 
 To change background image, add the url of the image that you want to set as background right after ```bg``` parameter. See example below:
 > [https://berkantkz.github.io/symphony/index.html?bg=https://i.ytimg.com/vi/vR0PHuWHzSQ/maxresdefault.jpg](https://berkantkz.github.io/symphony/index.html?bg=https://i.ytimg.com/vi/vR0PHuWHzSQ/maxresdefault.jpg) will print:
-![Symphony, like a love song on the radio](https://i.dbreecdn.download/gv3zQs8sGHgAGg/original_Ek%20A%C3%A7%C4%B1klama%202019-04-15%20004926.png)
+**media deleted from the server**
 
 If we combine all of them together:
 > [https://berkantkz.github.io/symphony/```?string1=Move&string2=along with&string3=the truth.&bg=https://i.ytimg.com/vi/vR0PHuWHzSQ/maxresdefault.jpg```](https://berkantkz.github.io/symphony/index.html?string1=Move&string2=along%20with&string3=the%20truth.&bg=https://i.ytimg.com/vi/vR0PHuWHzSQ/maxresdefault.jpg) will print:
-![Move along with the truth.](https://i.dbreecdn.download/b5iQqcboqQqxcA/original_Ek%20A%C3%A7%C4%B1klama%202019-04-15%20004858.png)
+**media deleted from the server**
 
 ### Notes:
 * You don't need to mind the special characters as Javascript will parse them. This is valid for the characters like ```?, !, -, #, and space ( )``` and some characters that are available in my own language such as ```ö, ç, ü, ğ, ş``` etc. I didn't test and I also don't know if it would work for the special characters that are from any other language.
